@@ -8,8 +8,11 @@ Each folder is a topic.
 ## 📁 Folder Structure
 
 ```
-01-data-types/
-└── data-types.js
+JavaScript/
+├── data-types.js
+├── data-types-conversion.js 
+├── variable-scope.js
+README.md
 
 ...
 ```
@@ -18,6 +21,11 @@ Each folder is a topic.
 
 ## ✅ Topics Covered
 
-### 🔹 01 - Data Types
+### 🔹 01 / 02 - Data Types / Data Type Conversion
 - Primitive & Non Primitive types
 - Use of `typeof` operator
+- Data types Conversion
+
+### 🔹 01 - Variable Scope
+- Local Scope
+- Global Scope
