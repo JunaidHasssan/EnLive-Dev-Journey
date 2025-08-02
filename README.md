@@ -1,7 +1,7 @@
 # EnLive-Dev-Journey 🚀
 
 This repository contains my topic-wise practice during the EnLive internship.  
-Each folder is a topic.
+Each file is a topic.
 
 ---
 
@@ -12,6 +12,7 @@ JavaScript/
 ├── data-types.js
 ├── data-types-conversion.js 
 ├── variable-scope.js
+├── hoisting.js
 README.md
 
 ...
@@ -26,6 +27,17 @@ README.md
 - Use of `typeof` operator
 - Data types Conversion
 
-### 🔹 01 - Variable Scope
+### 🔹 03 - Variable Scope
 - Local Scope
 - Global Scope
+- Lexical Scope
+
+### 🔹 04 - Hoisting
+- Hoisting of `var`, `let`, and `const`
+- Temporal Dead Zone (TDZ)
+- Function declaration vs expression hoisting
+
+### 🔹 04 - Closure
+- What is a closure
+- Function returning another function
+- Lexical environment
