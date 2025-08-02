@@ -9,10 +9,12 @@ Each file is a topic.
 
 ```
 JavaScript/
-├── data-types.js
-├── data-types-conversion.js 
-├── variable-scope.js
-├── hoisting.js
+├── 01-data-types.js
+├── 02-data-types-conversion.js 
+├── 03-variable-scope.js
+├── 04-hoisting.js
+├── 05-closure.js
+├── 06-array-methods.js
 README.md
 
 ...
@@ -37,7 +39,16 @@ README.md
 - Temporal Dead Zone (TDZ)
 - Function declaration vs expression hoisting
 
-### 🔹 04 - Closure
+### 🔹 05 - Closure
 - What is a closure
 - Function returning another function
 - Lexical environment
+
+### 🔹 06 - Array
+- Array
+- Array Methods
+- Add/Remove methods: `push()`, `pop()`, `shift()`, `unshift()`
+- Slice vs Splice
+- Iteration methods: `map()`, `filter()`, `forEach()`
+- Search methods: `find()`, `indexOf()`
+- Other: `concat()`, `join()`, `reverse()`, `sort()`
