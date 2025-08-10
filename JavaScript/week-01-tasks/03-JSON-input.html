@@ -1,0 +1,48 @@
+<!-- Write a script to create, update, and remove elements dynamically based on JSON input data -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+    <button onclick="addItem()">Add</button>
+    <button onclick="updateItem()">Update First</button>
+    <button onclick="removeItem()">Remove Last</button>
+
+    <script>
+
+        let data = [{ text: "Apple" }, { text: "Banana" }];
+
+        function show() {
+            box.innerHTML = data.map(item => `<p>${item.text}</p>`).join("");
+        }
+
+        function addItem() {
+            data.push({ text: "Mango " + (data.length + 1) });
+            show();
+        }
+
+        function updateItem() {
+            if (data.length) data[0].text = "Updated " + data[0].text;
+            show();
+        }
+
+        function removeItem() {
+            data.pop();
+            show();
+        }
+
+        show();
+
+    </script>
+
+</body>
+
+</html>

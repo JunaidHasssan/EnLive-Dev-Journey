@@ -1,0 +1,49 @@
+<!-- Build a mini “virtual DOM” comparison function that detects changes between two DOM trees and updates only the changed node. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual DOM</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <button id="updateBtn">Update</button>
+
+  <script>
+    // Simple virtual DOM element
+    function vElem(tag, text) {
+      return { tag, text };
+    }
+
+    // Render virtual DOM to real DOM
+    function render(vNode) {
+      const el = document.createElement(vNode.tag);
+      el.textContent = vNode.text;
+      return el;
+    }
+
+    // Compare and update only if text changes
+    function updateElement($root, newVNode, oldVNode) {
+      if (newVNode.text !== oldVNode.text) {
+        $root.textContent = newVNode.text;
+      }
+    }
+
+    // Initial virtual DOM
+    let oldVNode = vElem('p', 'Hello World');
+    let $app = render(oldVNode);
+    document.body.appendChild($app);
+
+    // After 2 seconds, update text
+    setTimeout(() => {
+      const newVNode = vElem('p', 'Hello Enlive Tech'); // text change
+      updateElement($app, newVNode, oldVNode);
+      oldVNode = newVNode; // update reference
+    }, 2000);
+  </script>
+</body>
+
+</html>

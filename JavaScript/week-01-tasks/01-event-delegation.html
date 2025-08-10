@@ -1,0 +1,57 @@
+<!-- 01-event-delegation.js -->
+<!-- Implement a custom DOM event delegation system for multiple buttons dynamically added after page load. -->
+<!-- Description: Uses a single event listener on a parent container to handle clicks on any button added later. -->
+<!-- Advantage: Better performance & memory usage than adding individual listeners to each button. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+
+<body>
+
+    <!-- Button to add new buttons -->
+
+    <button id="addBtn">Add New Button</button>
+
+    <!-- Container where new buttons will appear -->
+
+    <div id="buttons"></div>
+
+    <script>
+        const container = document.getElementById('buttons');
+        let buttonCounter = 1; // Counter to keep track of button numbers
+
+        // Event delegation listener on parent container
+        container.addEventListener('click', (event) => {
+            // Find the nearest button with a data-id attribute
+            const btn = event.target.closest('button[data-id]');
+
+            // Ignore clicks outside valid buttons
+            if (!btn || !container.contains(btn)) return;
+
+            // Action when button is clicked
+            console.log(`Delegated Click -> Button ID: ${btn.dataset.id}`);
+        });
+
+        // Logic to dynamically add new buttons
+        document.getElementById('addBtn').addEventListener('click', () => {
+
+            // Create a new button
+            const newBtn = document.createElement('button');
+            newBtn.textContent = `Button ${buttonCounter}`;
+            newBtn.dataset.id = buttonCounter; // Store numeric ID
+
+            // Add the button inside the container
+            container.appendChild(newBtn);
+            buttonCounter++; // Increment for next button
+        });
+    </script>
+
+</body>
+
+</html>
