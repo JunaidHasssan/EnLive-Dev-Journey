@@ -15,10 +15,10 @@ JavaScript/
 ├── 04-hoisting.js
 ├── 05-closure.js
 ├── 06-array-methods.js
+├── 07-object-method.js
 ├── 📁-week-01-tasks
 README.md
 
-...
 ```
 
 ---
@@ -53,6 +53,9 @@ README.md
 - Iteration methods: `map()`, `filter()`, `forEach()`
 - Search methods: `find()`, `indexOf()`
 - Other: `concat()`, `join()`, `reverse()`, `sort()`
+
+### 🔹 07 - Object Method
+- Example of object method
 
 ### 🔹 📁 Week 01 Tasks
 - Includes all the tasks assigmed
