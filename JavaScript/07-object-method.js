@@ -1,9 +1,9 @@
 let person = {
-    name: "Ali",
-    age: 20,
-    greet: function() {
-        console.log("Hello, my name is " + this.name);
-    }
+  firstName: "Junaid",
+  lastName: "Hassan",
+  greet: function () {
+    console.log("Hello, my name is " + this.firstName + " " + this.lastName);
+  },
 };
 
-person.greet(); // Output: Hello, my name is Ali
+person.greet();
