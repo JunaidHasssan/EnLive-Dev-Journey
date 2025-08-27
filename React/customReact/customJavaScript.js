@@ -5,7 +5,7 @@ function customRender(element, container) {
     domElement.setAttribute('href', reactElement.props.href)
     domElement.setAttribute('target', reactElement.props.target)
 
-    container.appendChild(domElement)
+    container.appendChild(domElement) 
     
 }
 
